@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="Hrvatska.webp">
+  <link rel="stylesheet" href="styles.css">
+  <title>Početna</title>
+</head>
+
+<body>
+
+
+<div class="topnav-wrapper">
+  <div class="topnav">
+    <span class="toggle-btn" onclick="toggleSidebar()">☰</span>
+
+    <a href="index.html">Početna</a>
+    <a href="Zagreb.html">Zagreb</a>
+    <a href="Split.html">Split</a>
+    <a href="Sibenik.html">Šibenik</a>
+    <a href="Rijeka.html">Rijeka</a>
+    <a href="Zadar.html">Zadar</a>
+    <a href="Pula.html">Pula</a>
+    <a href="Dubrovnik.html">Dubrovnik</a>
+  </div>
+</div>
+
+<div class="sidenav">
+  <a class="active" href="index.html">🏠 Početna</a>
+  <a href="OcjeneGradova.html">⭐ Ocjene gradova</a>
+  <a href="KorisnickaPodrska.html">📞 Korisnička podrška</a>
+  <a href="OWebStranici.html">ℹ️ O ovoj web stranici</a>
+</div>
+
+
+<div class="content">
+
+  <div class="card">
+    <h1>Dobrodošli u Hrvatsku</h1>
+
+    <p>Na ovoj stranici možete istražiti neke od najpoznatijih hrvatskih gradova.</p>
+    <p>Svaki grad ima svoju povijest, kulturu i znamenitosti.</p>
+  </div>
+
+  <br>
+
+  <div class="city-container">
+
+    <div class="city">
+      <a href="Zagreb.html"><h2>Zagreb</h2><p>Glavni grad Hrvatske.</p></a>
+    </div>
+
+    <div class="city">
+      <a href="Split.html"><h2>Split</h2><p>Grad na obali Jadrana.</p></a>
+    </div>
+
+    <div class="city">
+      <a href="Sibenik.html"><h2>Šibenik</h2><p>Poznati povijesni grad.</p></a>
+    </div>
+
+    <div class="city">
+      <a href="Rijeka.html"><h2>Rijeka</h2><p>Veliki lučki grad.</p></a>
+    </div>
+
+    <div class="city">
+      <a href="Zadar.html"><h2>Zadar</h2><p>Poznat po Morskim orguljama.</p></a>
+    </div>
+
+    <div class="city">
+      <a href="Pula.html"><h2>Pula</h2><p>Grad rimske povijesti.</p></a>
+    </div>
+
+    <div class="city">
+      <a href="Dubrovnik.html"><h2>Dubrovnik</h2><p>Poznati turistički grad.</p></a>
+    </div>
+
+  </div>
+
+</div>
+
+
+<script>
+function toggleSidebar() {
+  document.querySelector('.sidenav').classList.toggle('hidden');
+  document.querySelector('.content').classList.toggle('full');
+}
+</script>
+
+</body>
+</html>

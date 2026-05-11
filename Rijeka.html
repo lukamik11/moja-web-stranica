@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" type="image/x-icon" href="Hrvatska.webp">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+  <title>Rijeka</title>
+</head>
+<body>
+
+
+<div class="topnav">
+  <span class="toggle-btn" onclick="toggleSidebar()">☰</span>
+
+  <a href="index.html">Početna</a>
+  <a href="Zagreb.html">Zagreb</a>
+  <a href="Split.html">Split</a>
+  <a href="Sibenik.html">Šibenik</a>
+  <a href="Rijeka.html">Rijeka</a>
+  <a href="Zadar.html">Zadar</a>
+  <a href="Pula.html">Pula</a>
+  <a href="Dubrovnik.html">Dubrovnik</a>
+</div>
+
+
+<div class="sidenav">
+  <a class="active" href="Rijeka.html">🏠 Rijeka</a>
+  <a href="OcjeneGradova.html">⭐ Ocjene gradova</a>
+  <a href="KorisnickaPodrska.html">📞 Korisnička podrška</a>
+  <a href="OWebStranici.html">ℹ️ O ovoj web stranici</a>
+</div>
+
+
+<div class="content">
+
+  <div class="card">
+    <h1>Rijeka</h1>
+
+    <p>
+      Rijeka je jedan od najvećih hrvatskih gradova i važna luka na Jadranu.
+    </p>
+
+    <p>
+      Grad je poznat po Korzu, riječkom karnevalu i bogatoj industrijskoj povijesti.
+    </p>
+
+    <p>
+      Rijeka je Europska prijestolnica kulture bila 2020. godine.
+    </p>
+
+    <hr>
+
+    
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+
+    <style>
+      .mySlides {
+        display: none;
+        width: 100%;
+      }
+
+      .slider-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .slider-box {
+        max-width: 600px;
+        width: 100%;
+      }
+
+      .nav-btn {
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 18px;
+      }
+
+      .nav-btn:hover {
+        background-color: #333;
+      }
+
+    </style>
+
+    <h2 class="w3-center">Slike Rijeke</h2>
+
+    <div class="slider-container">
+
+      <button class="nav-btn" onclick="plusDivs(-1)">&#10094;</button>
+
+      <div class="slider-box">
+        <img class="mySlides" src="rijeka1.jpg">
+        <img class="mySlides" src="rijeka2.jpg">
+        <img class="mySlides" src="rijeka3.jpg">
+        <img class="mySlides" src="rijeka4.jpg">
+      </div>
+
+      <button class="nav-btn" onclick="plusDivs(1)">&#10095;</button>
+
+    </div>
+
+    <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        x[slideIndex - 1].style.display = "block";
+      }
+    </script>
+
+  </div>
+
+</div>
+
+
+<script>
+function toggleSidebar() {
+  document.querySelector('.sidenav').classList.toggle('hidden');
+  document.querySelector('.content').classList.toggle('full');
+}
+</script>
+
+</body>
+</html>

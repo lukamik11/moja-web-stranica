@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="Hrvatska.webp">
+  <title>Ocjene Gradova</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+
+<div class="topnav">
+  <span class="toggle-btn" onclick="toggleSidebar()">☰</span>
+
+  <a href="index.html">Početna</a>
+  <a href="Zagreb.html">Zagreb</a>
+  <a href="Split.html">Split</a>
+  <a href="Sibenik.html">Šibenik</a>
+  <a href="Rijeka.html">Rijeka</a>
+  <a href="Zadar.html">Zadar</a>
+  <a href="Pula.html">Pula</a>
+  <a href="Dubrovnik.html">Dubrovnik</a>
+</div>
+
+
+<div class="sidenav">
+  <a href="index.html">🏠 Početna</a>
+  <a class="active" href="OcjeneGradova.html">⭐ Ocjene Gradova</a>
+  <a href="KorisnickaPodrska.html">📞 Kontakt podrška</a>
+  <a href="OWebStranici.html">ℹ️ O ovoj web stranici</a>
+</div>
+
+
+<div class="content">
+
+  <div class="card">
+    <h1>Ocjene hrvatskih gradova</h1>
+
+    <table border="1" cellpadding="10">
+      <tr>
+        <th>Grad</th>
+        <th>Ocjena</th>
+      </tr>
+
+      <tr>
+        <td>Dubrovnik</td>
+        <td>9.8/10</td>
+      </tr>
+
+      <tr>
+        <td>Split</td>
+        <td>9.5/10</td>
+      </tr>
+
+      <tr>
+        <td>Zagreb</td>
+        <td>9.2/10</td>
+      </tr>
+
+      <tr>
+        <td>Zadar</td>
+        <td>9.0/10</td>
+      </tr>
+
+      <tr>
+        <td>Šibenik</td>
+        <td>8.9/10</td>
+      </tr>
+
+      <tr>
+        <td>Pula</td>
+        <td>8.8/10</td>
+      </tr>
+
+      <tr>
+        <td>Rijeka</td>
+        <td>8.5/10</td>
+      </tr>
+
+    </table>
+  </div>
+
+</div>
+
+<script>
+function toggleSidebar() {
+  document.querySelector('.sidenav').classList.toggle('hidden');
+  document.querySelector('.content').classList.toggle('full');
+}
+</script>
+
+</body>
+</html>

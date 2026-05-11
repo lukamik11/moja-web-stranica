@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" type="image/x-icon" href="Hrvatska.webp">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+  <title>Zadar</title>
+</head>
+<body>
+
+
+<div class="topnav">
+  <span class="toggle-btn" onclick="toggleSidebar()">☰</span>
+
+  <a href="index.html">Početna</a>
+  <a href="Zagreb.html">Zagreb</a>
+  <a href="Split.html">Split</a>
+  <a href="Sibenik.html">Šibenik</a>
+  <a href="Rijeka.html">Rijeka</a>
+  <a href="Zadar.html">Zadar</a>
+  <a href="Pula.html">Pula</a>
+  <a href="Dubrovnik.html">Dubrovnik</a>
+</div>
+
+
+<div class="sidenav">
+  <a class="active" href="Zadar.html">🏠 Zadar</a>
+  <a href="OcjeneGradova.html">⭐ Ocjene gradova</a>
+  <a href="KorisnickaPodrska.html">📞 Korisnička podrška</a>
+  <a href="OWebStranici.html">ℹ️ O ovoj web stranici</a>
+</div>
+
+
+<div class="content">
+
+  <div class="card">
+
+    
+    <audio controls>
+      <source src="Zadar.mp3" type="audio/mpeg">
+      Vaš preglednik ne podržava audio element.
+    </audio>
+
+    <h1>Zadar</h1>
+
+    <p>
+      Zadar je povijesni grad u sjevernoj Dalmaciji s više od 3000 godina kontinuirane povijesti. Smješten je na poluotoku i poznat po spoju antičke baštine, srednjovjekovne arhitekture i modernih atrakcija.
+    </p>
+
+    <p>
+      U staroj gradskoj jezgri nalaze se rimski forum, crkva sv. Donata i katedrala sv. Stošije, koje svjedoče o bogatoj povijesti i važnosti grada kroz stoljeća. Šetnja kamenim ulicama pruža pravi mediteranski ugođaj.
+    </p>
+
+    <p>
+Zadar je danas poznat i po Morskim orguljama, jedinstvenom instrumentu koji pomoću valova mora stvara glazbu, te instalaciji Pozdrav Suncu, koja navečer oduševljava svjetlosnim efektima.
+    </p>
+
+     <p>
+Grad nudi opuštenu atmosferu, lijepe plaže, bogatu gastronomiju i jedan od najljepših zalazaka sunca na Jadranu, što ga čini idealnim odredištem za posjetitelje svih generacija.
+    </p>
+
+<br>
+
+<iframe width="550" height="345" src="https://www.youtube.com/embed/rOia5ajNSj8">
+</iframe>
+
+
+  </div>
+
+</div>
+
+
+<script>
+function toggleSidebar() {
+  document.querySelector('.sidenav').classList.toggle('hidden');
+  document.querySelector('.content').classList.toggle('full');
+}
+</script>
+
+</body>
+</html>

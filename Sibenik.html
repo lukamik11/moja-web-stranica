@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" type="image/x-icon" href="Hrvatska.webp">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styles.css">
+<title>Šibenik</title>
+
+<style>
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+.hero-video{
+  width:100%;
+  height:100vh;
+  overflow:hidden;
+}
+
+.hero-video video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.topnav{
+  opacity:0;
+  transform:translateY(-100%);
+  transition:0.3s;
+  pointer-events:none;
+}
+
+.topnav.show{
+  opacity:1;
+  transform:translateY(0);
+  pointer-events:auto;
+}
+
+
+.sidenav{
+  position: fixed;
+  top: 45px;
+  left: -240px;
+  width: 220px;
+  height: calc(100% - 45px);
+  background-color: rgba(245, 247, 251, 0.95);
+  backdrop-filter: blur(6px);
+  border-right: 1px solid #ccc;
+  transition: 0.3s;
+  z-index: 999;
+}
+
+
+.sidenav.hidden{
+  left: 0;
+}
+
+
+.content{
+  margin-left: 0;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.content.full{
+  margin-left: 220px;
+}
+
+
+#map{
+  width:100%;
+  height:400px;
+  margin-top:20px;
+  position: relative;
+  z-index: 1;
+}
+
+
+.leaflet-bottom.leaflet-left {
+  z-index: 500;
+}
+
+</style>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+</head>
+
+<body>
+
+<div class="hero-video">
+  <video autoplay muted loop playsinline>
+    <source src="sibenik-video.mp4" type="video/mp4">
+  </video>
+</div>
+
+
+<div class="topnav" id="topnav">
+  <span class="toggle-btn" onclick="toggleSidebar()">☰</span>
+
+  <a href="index.html">Početna</a>
+  <a href="Zagreb.html">Zagreb</a>
+  <a href="Split.html">Split</a>
+  <a href="Sibenik.html">Šibenik</a>
+  <a href="Rijeka.html">Rijeka</a>
+  <a href="Zadar.html">Zadar</a>
+  <a href="Pula.html">Pula</a>
+  <a href="Dubrovnik.html">Dubrovnik</a>
+</div>
+
+
+<div class="sidenav">
+  <a class="active" href="Sibenik.html">🏠 Šibenik</a>
+  <a href="OcjeneGradova.html">⭐ Ocjene gradova</a>
+  <a href="KorisnickaPodrska.html">📞 Korisnička podrška</a>
+  <a href="OWebStranici.html">ℹ️ O ovoj web stranici</a>
+</div>
+
+
+<div class="content">
+
+  <div class="card">
+    <h1>Šibenik</h1>
+
+    <p>Šibenik je povijesni grad smješten u srednjoj Dalmaciji.</p>
+    <p>Najpoznatiji je po katedrali sv. Jakova.</p>
+    <p>Grad ima bogatu kulturnu baštinu.</p>
+  </div>
+
+  <h2>Turističke znamenitosti Šibenika</h2>
+
+  <div id="map"></div>
+
+  <script>
+  var map = L.map('map', {
+    zoomControl: false
+  }).setView([43.7350, 15.8890], 13);
+
+  L.control.zoom({
+    position: 'bottomleft'
+  }).addTo(map);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  var locations = [
+    { name: "Katedrala sv. Jakova", coords: [43.7356951, 15.8890746] },
+    { name: "Tvrđava sv. Mihovila", coords: [43.7377828, 15.8896523] },
+    { name: "Tvrđava Barone", coords: [43.7369764, 15.8964575] },
+    { name: "Tvrđava Sv. Ivana", coords: [43.7398267, 15.8932968] },
+    { name: "Tvrđava Sv. Nikole", coords: [43.7215814, 15.8545185] },
+    { name: "Stari grad", coords: [43.7348086, 15.8924437] }
+  ];
+
+  locations.forEach(function(place) {
+    L.marker(place.coords)
+      .addTo(map)
+      .bindPopup(place.name);
+  });
+  </script>
+
+</div>
+
+<script>
+
+function toggleSidebar() {
+  document.querySelector('.sidenav').classList.toggle('hidden');
+  document.querySelector('.content').classList.toggle('full');
+}
+
+
+function closeSidebar() {
+  document.querySelector('.sidenav').classList.remove('hidden');
+  document.querySelector('.content').classList.remove('full');
+}
+
+const topnav = document.getElementById("topnav");
+
+window.addEventListener("scroll", function () {
+
+  const showNav = window.scrollY > 10;
+
+  if (showNav) {
+    topnav.classList.add("show");
+  } else {
+    topnav.classList.remove("show");
+
+    /* NOVO: ako si na vrhu (fullscreen video), zatvori vertikalni meni */
+    closeSidebar();
+  }
+
+});
+
+if (window.scrollY > 10) {
+  topnav.classList.add("show");
+} else {
+  topnav.classList.remove("show");
+  closeSidebar();
+}
+
+</script>
+
+</body>
+</html>

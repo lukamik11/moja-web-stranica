@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" type="image/x-icon" href="Hrvatska.webp">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+  <title>Dubrovnik</title>
+</head>
+<body>
+
+
+<div class="topnav">
+  <span class="toggle-btn" onclick="toggleSidebar()">☰</span>
+
+  <a href="index.html">Početna</a>
+  <a href="Zagreb.html">Zagreb</a>
+  <a href="Split.html">Split</a>
+  <a href="Sibenik.html">Šibenik</a>
+  <a href="Rijeka.html">Rijeka</a>
+  <a href="Zadar.html">Zadar</a>
+  <a href="Pula.html">Pula</a>
+  <a href="Dubrovnik.html">Dubrovnik</a>
+</div>
+
+
+<div class="sidenav">
+  <a class="active" href="Dubrovnik.html">🏠 Dubrovnik</a>
+  <a href="OcjeneGradova.html">⭐ Ocjene gradova</a>
+  <a href="KorisnickaPodrska.html">📞 Korisnička podrška</a>
+  <a href="OWebStranici.html">ℹ️ O ovoj web stranici</a>
+</div>
+
+
+<div class="content">
+
+  <div class="card">
+    <h1>Dubrovnik</h1>
+
+    <p>
+      Dubrovnik je jedan od najpoznatijih turističkih gradova u Hrvatskoj.
+    </p>
+
+    <p>
+      Poznat je po starim gradskim zidinama i povijesnoj jezgri pod zaštitom UNESCO-a.
+    </p>
+
+    <p>
+      Često ga zovu “biser Jadrana” zbog njegove ljepote i povijesnog značaja.
+    </p>
+
+   
+    <img src="dubrovnik-karta.jpg" alt="Mapa starog grada" style="max-width:100%; height:auto; margin-top:15px;">
+
+    <br><br>
+
+    
+    <a href="dubrovnik-karta.jpg" download>
+      <button>Preuzmite mapu</button>
+    </a>
+
+  </div>
+
+</div>
+
+<script>
+function toggleSidebar() {
+  document.querySelector('.sidenav').classList.toggle('hidden');
+  document.querySelector('.content').classList.toggle('full');
+}
+</script>
+
+</body>
+</html>
